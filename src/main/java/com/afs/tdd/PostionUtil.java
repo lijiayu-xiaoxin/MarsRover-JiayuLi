@@ -9,7 +9,11 @@ public class PostionUtil {
     }
 
     public static String getFinalPos(String curPosStr, char[] operateCodes){
-        return "0 2 N";
+        Position curPos = toPosition(curPosStr);
+        for (int i = 0; i < operateCodes.length; i++) {
+            changePos(curPos, operateCodes[i]);
+        }
+        return toPosString(curPos);
     }
 
     public static String toPosString(Position pos) {
