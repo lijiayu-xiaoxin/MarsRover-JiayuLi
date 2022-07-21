@@ -70,4 +70,15 @@ public class DemoTest {
         // Then
         assertThat(finalPos).isEqualTo("-1 1 W");
     }
+
+    @Test
+    void should_goto_0n1N_when_changePos_given_n1n2S_and_MLMLMM() {
+        // Given
+        String curPos = "-1 -2 S";
+        char[] operateCodes = {'M', 'L', 'M', 'L', 'M', 'M'};
+        // When
+        String finalPos = PostionUtil.getFinalPos(curPos, operateCodes);
+        // Then
+        assertThat(finalPos).isEqualTo("0 -1 N");
+    }
 }

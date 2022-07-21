@@ -17,7 +17,7 @@ public class PostionUtil {
     }
 
     public static String toPosString(Position pos) {
-        return pos.getX() + " " + pos.getY() + " " + Position.dirtChars[pos.getDirt()];
+        return pos.getX_coordinate() + " " + pos.getY_coordinate() + " " + Position.dirtChars[pos.getDirt()];
     }
 
     public static Position toPosition(String strPos) {
@@ -43,10 +43,10 @@ public class PostionUtil {
 
     private static void moveForward(Position pos) {
         switch (pos.getDirt()){
-            case 0: pos.setY(pos.getY() + 1);break;
-            case 1: pos.setX(pos.getX() + 1);break;
-            case 2: pos.setY(pos.getY() - 1);break;
-            case 3: pos.setX(pos.getX() - 1);break;
+            case 0: pos.setY_coordinate(pos.getY_coordinate() + 1);break;
+            case 1: pos.setX_coordinate(pos.getX_coordinate() + 1);break;
+            case 2: pos.setY_coordinate(pos.getY_coordinate() - 1);break;
+            case 3: pos.setX_coordinate(pos.getX_coordinate() - 1);break;
         }
     }
 

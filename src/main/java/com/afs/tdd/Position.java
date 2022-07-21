@@ -1,39 +1,45 @@
 package com.afs.tdd;
 
 public class Position {
-    private int x;
-    private int y;
-    private int dirtIndex;
 
-    public static final char[] dirtChars = {'N', 'E', 'S', 'W'};
+    private int x_coordinate;
+    private int y_coordinate;
+    private int direction_index;
 
-    public int getX() {
-        return x;
+    private static final char DIRECTION_NORTH = 'N';
+    private static final char DIRECTION_EAST = 'E';
+    private static final char DIRECTION_SOUTH = 'S';
+    private static final char DIRECTION_WEST = 'W';
+
+    public static final char[] dirtChars = {DIRECTION_NORTH, DIRECTION_EAST, DIRECTION_SOUTH, DIRECTION_WEST};
+
+    public Position(int x_coordinate, int y_coordinate, int direction_index) {
+        this.x_coordinate = x_coordinate;
+        this.y_coordinate = y_coordinate;
+        this.direction_index = direction_index;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public int getX_coordinate() {
+        return x_coordinate;
     }
 
-    public int getY() {
-        return y;
+    public void setX_coordinate(int x_coordinate) {
+        this.x_coordinate = x_coordinate;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public int getY_coordinate() {
+        return y_coordinate;
+    }
+
+    public void setY_coordinate(int y_coordinate) {
+        this.y_coordinate = y_coordinate;
     }
 
     public int getDirt() {
-        return dirtIndex;
+        return direction_index;
     }
 
     public void setDirt(int dirt) {
-        this.dirtIndex = dirt;
-    }
-
-    public Position(int x, int y, int dirtIndex) {
-        this.x = x;
-        this.y = y;
-        this.dirtIndex = dirtIndex;
+        this.direction_index = dirt;
     }
 }
