@@ -55,7 +55,7 @@ public class DemoTest {
         String curPos = "0 0 N";
         char[] operateCodes = {'M', 'M'};
         // When
-        String finalPos = PostionUtil.getFinalPos(curPos, operateCode);
+        String finalPos = PostionUtil.getFinalPos(curPos, operateCodes);
         // Then
         assertThat(finalPos).isEqualTo("0 2 N");
     }

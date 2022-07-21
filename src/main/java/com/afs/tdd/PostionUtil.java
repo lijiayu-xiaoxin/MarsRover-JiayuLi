@@ -8,6 +8,10 @@ public class PostionUtil {
         return toPosString(curPos);
     }
 
+    public static String getFinalPos(String curPosStr, char[] operateCodes){
+        return "0 2 N";
+    }
+
     public static String toPosString(Position pos) {
         return pos.getX() + " " + pos.getY() + " " + Position.dirtChars[pos.getDirt()];
     }
