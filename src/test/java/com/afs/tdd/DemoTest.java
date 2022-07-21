@@ -59,4 +59,15 @@ public class DemoTest {
         // Then
         assertThat(finalPos).isEqualTo("0 2 N");
     }
+
+    @Test
+    void should_goto_r11W_when_changePos_given_00N_and_MLM() {
+        // Given
+        String curPos = "0 0 N";
+        char[] operateCodes = {'M', 'L', 'M'};
+        // When
+        String finalPos = PostionUtil.getFinalPos(curPos, operateCodes);
+        // Then
+        assertThat(finalPos).isEqualTo("-1 1 W");
+    }
 }
