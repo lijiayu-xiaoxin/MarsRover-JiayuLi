@@ -61,7 +61,7 @@ public class DemoTest {
     }
 
     @Test
-    void should_goto_r11W_when_changePos_given_00N_and_MLM() {
+    void should_goto_n11W_when_changePos_given_00N_and_MLM() {
         // Given
         String curPos = "0 0 N";
         char[] operateCodes = {'M', 'L', 'M'};
